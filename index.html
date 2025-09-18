@@ -15,15 +15,20 @@
             <span></span><span></span><span></span>
         </label>
         <nav>
+        <div class="nav-links">
          <a href="" class="navbar">FEATURES</a> 
          <a href="" class="navbar">PRICING</a>
          <a href="" class="navbar">CONTACT</a>
          <button id="loginbutton">LOGIN</button>  
+        </div>
+        <div class="nav-socials">
+      <a href="#"><img src="assets/Images/icon-facebook.svg" alt="fb"></a>
+      <a href="#"><img src="assets/Images/icon-twitter.svg" alt="tw"></a>
+    </div>      
         </nav>
     </header>
 
     <main class="mainflex">
-        <!-- <section class="rightflex"> -->
             <div class="rightflex">
             <div class="blue-bg"></div>
             <img src="assets/Images/illustration-hero.svg" alt="BookMArk illustration image" class="illustrationphoto1">
@@ -41,7 +46,6 @@
                     <input type="radio" value="radiobutton" name="button">Get it on Firefox -->
                 </div>
             </div>
-        <!-- </section> -->
 
     </main>
     <div class="featurecenter">
@@ -49,28 +53,54 @@
         <p>Our aim is to make it quick and easy for yo to access your favourite websites. 
             Your bookmarks sync between your devices so you can access them on the go.</p>
     </div>
+          <div class="features-description"> 
+             <div class="tabs">
+               <input type="radio" id="tab1" name="tab" checked> 
+               <label for="tab1">Simple Bookmarking</label>
+                <input type="radio" id="tab2" name="tab"> 
+                <label for="tab2">Speedy Searching</label>
+                 <input type="radio" id="tab3" name="tab">
+                  <label for="tab3">Easy Sharing</label>
+                  <br><br><br>
+                    <div class="tab-content" id="content1"> 
+                      <div class="pic"> 
+                          <div class="blue-bg-bookmark"></div>
+                        <img src="assets/Images/illustration-features-tab-1.svg" alt="image of tab 1"> 
+                      </div> <br><br><br>
+                      <div class="info">
+                         <div >Bookmark in one click</div> 
+                         <p> Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.
+                           </p> 
+                           <button class="button">More Info</button>
+                           </div> 
+                          </div> 
 
-    <div class="pagelink">
-        <a href="index.html" id="redhoveronindex">Simple Bookmarking</a>
-        <a href="speedy.html">Speedy Searching</a>
-        <a href="easy.html">Easy Sharing</a>
-    </div>
+                          <div class="tab-content" id="content2">
+                             <div class="pic"> 
+                                <div class="blue-bg-bookmark"></div>
+                              <img src="assets/Images/illustration-features-tab-2.svg" alt="image of tab 1"> </div>
+                               <div class="info"> 
+                                <div > Intelligent search</div>
+                                 <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.
+                                   </p> 
+                                   <button class="button">More Info</button>
+                                   </div>
+                                   </div> 
 
-    <section class="simplebookmarksection">
-    <div class="bookmark-content">
-    <div class="bookmark-text">
-      <h2>Bookmark in one click</h2>
-      <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
-      <button class="moreinfobutton">More Info</button>
-    </div>
-    <div class="bookmark-image">
-      <div class="blue-bg-bookmark"></div>
-      <img src="assets/Images/illustration-features-tab-1.svg" alt="Bookmark illustration" class="illustrationphoto2">
-    </div>
-  </div>
-</section>
-<br><br><br><br><br><br>
-
+                                   <div class="tab-content" id="content3">
+                                       <div class="pic">
+                                          <div class="blue-bg-bookmark"></div>
+                                         <img src="assets/Images/illustration-features-tab-3.svg" alt="image of tab 1"> 
+                                        </div>
+                                         <div class="info">
+                                           <div > Share your bookmarks</div>
+                                            <p>Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button. 
+                                            </p> 
+                                            <button class="button">More Info</button>
+                                           </div>
+                                           </div>
+                                           </div> 
+                                          </section> 
 <section class="extension-section">
 <div class="downloads">
 <h2>Download the extension</h2>
@@ -112,31 +142,28 @@
 <!-- ======  FAQ ACCORDION  ====== -->
 <section class="faq-section">
   <div class="faq-container">
-    <!-- heading already exists -->
     <div class="faq-items">
       <details class="faq-item">
         <summary>What is Bookmark?</summary>
         <!-- <img src="assets/Images/icon-arrow.svg"> -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
-           ligula id augue lobortis dictum.</p>
+        <p>In the context of your project/UI design, "Bookmark" means saving a website link so you can come back to it later easily.</p>
       </details>
 
       <details class="faq-item">
         <summary>How can I request a new browser?</summary>
-        <p>Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
-           ultricies non ligula.</p>
+        <p>You can install a new browser by downloading it from 
+          its official website (e.g., Chrome, Firefox, Opera) and running the installer.</p>
       </details>
 
       <details class="faq-item">
         <summary>Is there a mobile app?</summary>
-        <p>Sed consectetur quam id neque fermentum accumsan. Praesent luctus
-           vestibulum dolor, ut condimentum.</p>
+        <p>Yes there are many official mobile apps for both iOS (App Store) and Android (Google Play Store).</p>
       </details>
 
       <details class="faq-item">
         <summary>What about other Chromium browsers?</summary>
-        <p>Nulla sed nisl efficitur, ultricies arcu et, finibus odio. Sed
-           hendrerit mauris sit amet tellus.</p>
+        <p>There are many other Chromium-based browsers like Brave, Opera, 
+          Microsoft Edge, Vivaldi, and Arc, all built on the same engine as Chrome but with different features.</p>
       </details>
     </div>
 
@@ -146,29 +173,6 @@
 
 
 <br><br><br><br><br>
-<!-- <section class="blue-background-footer">
-<div class="blue-bg-stayuptodate">
-<p>35,000+ ALREADY JOINED</p>
-<h3>Stay up-to-date with what we're doing</h3>
-<input placeholder="Enter your email address">
- <button id="loginbutton">Contact Us</button>
-</div>
-</section>
-
-
-<footer class="footercolor">
-<img src="assets/Images/logo-bookmark.svg" alt="Bookmark logo" class="logo">
-<nav>
-         <a href="" class="navbar">FEATURES</a> 
-         <a href="" class="navbar">PRICING</a>
-         <a href="" class="navbar">CONTACT</a>
-</nav>
-
-</footer> -->
-
-
-
-
 
 <section class="stay-up-to-date">
   <div class="container">

@@ -1,13 +1,14 @@
-
 header{
     display: flex;
     padding: 50px 70px;
     justify-content: space-between;
+    align-items: center;
     /* align-items: flex-start; */
 }
 
 .logo{
     display: flex;
+    align-items: center;
     height: 30px;
     /* width: 100px; */
     margin-left: 60px;
@@ -25,16 +26,34 @@ nav{
     margin-right: 240px;
 }
 
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* space between FEATURES, PRICING, CONTACT, LOGIN */
+}
+
 nav a{
     text-decoration: none;
      font-family: 'Inter'; 
      color:rgb(144, 139, 139);
      display: flex;
      justify-content: center;
+     
 }
 
 nav a:hover{
     color: red;
+}
+
+.navbar {
+  text-decoration: none;
+  color: rgb(57, 55, 55);
+  font-family: 'Inter';
+}
+
+.navbar:hover {
+  color: red;
 }
 #loginbutton{
     background-color: rgb(246, 125, 109);
@@ -52,6 +71,15 @@ nav a:hover{
       background: rgb(222, 50, 38);
 }
 
+.nav-socials {
+  display: flex;
+  gap: 20px;
+}
+
+.hamburger,
+.nav-check {
+  display: none; /* hide hamburger on desktop */
+}
 .mainflex{
 /* font-family: 'Inter'; */
 /* color: rgb(55, 16, 114); */
@@ -111,7 +139,7 @@ flex-direction: row-reverse;
 }
 
 .illustrationphoto1{
-   width: 850px;
+   width: 100%;
    height: auto;
    margin-right: 100px;
    /* z-index: 5; */
@@ -123,7 +151,7 @@ flex-direction: row-reverse;
   position: absolute;
   bottom: 200px; 
   right: -10px;
-  width: 750px;
+  width: 30%;
   height: 400px;
   background: rgb(82, 103, 223); 
   border-radius: 0 0 0 170px; 
@@ -186,32 +214,6 @@ flex-direction: row-reverse;
   margin: 0 auto;    /* center it */
 }
 
-.pagelink{
-    color: rgb(170, 164, 164);
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-    /* line-height: 1px; */
-    /* gap:30px */
-}
-
-.pagelink a{
-    text-decoration: none;
-    color: rgb(128, 124, 124);    
-    font-family: 'Inter';
-     /* line-height: 1px; */
-
-}
-
-.pagelink a:hover{
-    color: red;
-}
-
-#redhoveronindex{
-color: red;
-}
-
-/* Simple Bookmarking Section */
 .simplebookmarksection {
   padding: 80px 70px;
   font-family: 'Inter';
@@ -243,41 +245,133 @@ color: red;
   margin-bottom: 20px;
 }
 
-.moreinfobutton {
-  background-color: rgb(82, 103, 223);
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 4px;
+.features-description {
+  align-self: center;
+}
+
+.tabs {
+  margin-bottom: 80px;
+  text-align: center;
   font-family: 'Inter';
+  color: rgb(57, 55, 55);
+} 
+
+.tabs input[type="radio"] {
+  display: none;
+} 
+
+.tabs label {
+  display: inline-block;
   cursor: pointer;
-}
-.moreinfobutton:hover{
-    background-color: rgb(124, 137, 203);
-}
+  padding: 24px 50px;
+  border-bottom: 2px solid var(--grey-button);
+  font-weight: 600;
+  color: var(--grey-dark);
+  letter-spacing: 0.8px;
+  font-size: 20px;
+} 
 
-.bookmark-image {
+.tab-content {
+  margin-top: 90px;
+  display: none;
+  margin-bottom: 50px;
+  min-height: 420px;
+  justify-content: center;
+}
+.pic {
+  width: 35%;
   position: relative;
 }
-
-.illustrationphoto2 {
-  width: 600px;
-  height: auto;
+.pic img {
+  width: 100%;
+  object-fit: cover;
   position: relative;
-  z-index: 2;
-  margin-left: 100px;
-
+  z-index: 1;
 }
+.pic::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  right: 10%;
+  height: 75%;
+  width: 135%;
+  /* background-color: var(--primary-Blue); */
+  z-index: 0;
+  border-radius: 0 190px 190px 0;
+}
+.info {
+  width: 43%;
+  align-self: center;
+  text-align: left;
+  margin-left: 120px;
+  font-family: 'Inter';
+}
+.info div {
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 1.3px;
+  font-family: 'Inter';
+  color: rgb(57, 55, 55);
+}
+.info p {
+  /* color: var(--grey-medium); */
+  line-height: 1.4;
+  font-size: 17px;
+   color: rgb(170, 164, 164);
+   font-family: 'Inter';
+}
+.button {
+  padding: 20px 30px;
+  background-color: rgb(82, 103, 223);
+  color: #ffff;
+  border-radius: 5px;
+  margin-top: 30px;
+  font-size: 16px;
+  letter-spacing: 1.4px;
+  border: none;
+  font-weight: 600;
+}
+
+.button:hover{
+  background-color: rgb(124, 137, 203);
+}
+
+.button a {
+  text-decoration: none;
+  text-align: center;
+} 
+
+#tab1:checked ~ #content1 {
+  display: flex;
+}
+
+#tab2:checked ~ #content2 {
+  display: flex;
+}
+
+#tab3:checked ~ #content3 {
+  display: flex;
+} 
 
 .blue-bg-bookmark {
   position: absolute;
-  top: 140px;
-  left: -70px;
+  top: 250px;
+  left: -300px;
   width: 550px;
   height: 415px;
   background: rgb(82, 103, 223);
   border-radius: 0 0 150px 0;
   z-index: 1;
+}
+.tabs label:hover,
+.tabs label:focus,
+.tabs label:active,
+#tab1:checked + label,
+#tab2:checked + label,
+#tab3:checked + label {
+  color: red !important;
+  border-bottom: 4px solid red !important;
 }
 
 .extension-section {
@@ -323,19 +417,6 @@ color: red;
     height: 330px; */
 
 }
-
-/* .chromextension{ */
-    /* border-radius: 5px; */
-    /* border-radius: 15px 15px 15px 15px; */
-    /* width: 280px; */
-    /* height: 330px; */
-    /* background-color: rgb(251, 249, 249); */
-    /* margin-left: 200px; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* align-self: center; */
-    /* align-content: center; */
-/* } */
 
 .chromextension{
   background: #fff;
@@ -424,13 +505,12 @@ color: red;
      line-height: 25px;
      margin-left: 735px;
      text-align: center;
-        width: 90%;        /* instead of 500px */
-  max-width: 500px;  /* still restricts on desktop */
-  margin: 0 auto;    /* center it */
+     width: 90%;        /* instead of 500px */
+     max-width: 500px;  /* still restricts on desktop */
+     margin: 0 auto;    /* center it */
 
 }
 
-/* ----------  FAQ ACCORDION  ---------- */
 .faq-section {
   padding: 40px 60px 80px;
   font-family: 'Inter', sans-serif;
@@ -459,7 +539,12 @@ color: red;
   justify-content: space-between;
   align-items: center;
   font-size: 1.05rem;
+  transition: color .25s;
   color: rgb(57, 55, 55);
+}
+
+.faq-item summary:hover {
+  color: red;   
 }
 
 .faq-item summary::after {
@@ -635,198 +720,300 @@ background-color: rgb(222, 50, 38);
     background-color: white;
 }
 
+:root{
+  --primary-Blue: rgb(82,103,223);
+  --primary-Red:  rgb(246,125,109);
+  --grey-dark:   rgb(57,55,55);
+  --grey-medium: rgb(170,164,164);
+  --grey-button: rgb(144,139,139);
+}
 
-@media (max-width: 768px) {
+*{
+  box-sizing:border-box;
+}
+html{
+  scroll-behavior:smooth;
+}
+body{
+  margin:0;
+  padding:0;
+  overflow-x:hidden;          
+}
 
+
+@media (max-width: 600px){
 
   header {
-    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
     align-items: center;
-    padding: 20px;
-    gap: 20px;
-    
-  }
-  body {
-  padding-top: 64px;   
+    justify-content: space-between;
+    padding: 32px 24px;
+    z-index: 1100;
+    background: transparent;
   }
 
-    .hamburger {
+  .logo {
+    height: 24px; 
+    z-index: 1;
+    transition: filter .3s;
+  }
+
+  .nav-check { display: none; }
+  
+  .hamburger {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 44px;
-    right: 20px;
-    z-index: 1200;
-    /* z-index: 10; */
-    gap: 5.5px;
-    /* color: black; */
-    background-color: rgb(37, 43, 70);
-    /* background-color: #fff; */
-    /* cursor: pointer; */
-     /* margin-left: auto; */
+    gap: 4px;
+    cursor: pointer;
+    z-index: 1;
   }
   .hamburger span {
-    width: 28px;
+    width: 26px;
     height: 3px;
-    /* background: #000; */
+    background: #252b46; 
     transition: .3s;
-    background-color: #fff;
-    /* background-color: black; */
   }
 
   header nav {
     position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 70%;
-    max-width: 250px;
-    /* background:#000; */
+    inset: 0;
     background: rgb(37, 43, 70);
+    display: flex;
     flex-direction: column;
-     z-index: 1001;
-    padding: 25vh 20px;
-    gap: 25px;
-    transform: translateX(100%);
+    align-items: center;
+    justify-content: space-between;
+    padding: 24vh 0 10vh;
+    transform: translateY(-100%);
     transition: transform .35s ease;
-    box-shadow: -5px 0 25px rgba(0,0,0,.15);
   }
 
-  .nav-check:checked ~ nav {
-    transform: translateX(0);
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
   }
-  .nav-check:checked ~ .hamburger span:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
+    width: 200px;
+    text-align: center;
   }
-  .nav-check:checked ~ .hamburger span:nth-child(2) {
-    opacity: 0;
-  }
-  .nav-check:checked ~ .hamburger span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-  }
-  
-  .logo {
-    margin-left: 0;
-  }
-
-  nav {
-    gap: 20px;
-    margin: 0;
-    flex-wrap: wrap;
-  }
-
-  #loginbutton {
-    padding: 8px 20px;
-    font-size: 0.85rem;
-    margin: auto;
+  .nav-links .login-link {
+    margin-top: 16px;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    width: 220px;
   }
 
-  .mainflex {
+  .nav-socials {
+    display: flex;
+    gap: 24px;
+  }
+  .nav-socials img { width: 24px; filter: brightness(0) invert(1); }
+
+  .nav-check:checked ~ nav { transform: translateY(0); }
+
+  .nav-check:checked ~ .hamburger span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+  .nav-check:checked ~ .hamburger span:nth-child(2) { opacity: 0; }
+  .nav-check:checked ~ .hamburger span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+
+  .nav-check:checked ~ .logo { filter: brightness(0) invert(1); }
+  .nav-check:checked ~ .hamburger span { background: #fff; }
+
+  .logo{margin-left:0;}
+  nav{
+     gap:15px;
+     margin: 0;
+     flex-wrap:wrap;
+  }
+
+  .mainflex{
+
+    display: flex;
     flex-direction: column; 
-    padding: 20px;
-    text-align: center;
+    gap: 2rem;
+    padding: 5vw 5vw; 
   }
-
   .rightflex {
-    justify-content: center;
-    padding: 0;
-  }
-
-  .illustrationphoto1 {
-    width: 100%;
-    max-width: 350px;
+    position: relative;
+    width: 90%;
+    max-width: 500px;
     margin: 0 auto;
   }
 
-  .blue-bg {
-    display: none;
+  .illustrationphoto1{
+     width:90%;
+     height: auto;
+     position: relative;
+     z-index: 2;
+     margin-top: 50px;
   }
+  .blue-bg{
+     position: absolute;
+    bottom: 0;
+    right: -10vw;
+    width: 70vw;
+    height: 35vw; 
+    max-width: 400px;
+    max-height: 250px;
+    background: rgb(82, 103, 223);
+    border-radius: 0 0 0 18vw; 
+    z-index: 1;
+  }          
 
-  .mainflextextheading {
-    max-width: 100%;
-    padding: 0;
-    align-items: center;
-  }
-
-  .mainflextextheading h1 {
-    font-size: 1.8rem;
-    padding: 0;
-    line-height: 1.3;
-  }
-
-  .mainflextextheading p {
-    margin: 10px 0;
+  .mainflextextheading{
+    padding:0;
+    align-items:center;
     text-align: center;
-    margin-left: 0;
   }
+  .mainflextextheading h1{font-size:1.8rem; line-height:1.3;}
+  .mainflextextheading p{margin:10px 0; margin-left:0;}
+  .twobutton{flex-direction:column; gap:15px;}
+  .buttonchrome, .buttonfirefox{width:80%; margin:0 auto;}
 
-  .twobutton {
-    flex-direction: column;
+  .bookmark-content{
+    flex-direction:column;
+    margin:0;
+    gap:40px;
+    text-align:center;
+  }
+  .illustrationphoto2{
+    width:90%;
+    max-width:350px;
+    margin-left:0;
+  }
+  .blue-bg-bookmark{display:none;}
+
+  .extensions{flex-direction:column; align-items:center; gap:30px;}
+  .firefoxextension, .operaextension{transform:translateY(0);}
+
+  .faq-section{padding:20px;}
+  .stay-up-to-date{padding:40px 20px;}
+  .footer-container{flex-direction:column; text-align:center; gap:20px;}
+  .footer-nav{flex-direction:column; gap:10px;}
+
+  .tabs label{
+    display:block;
+    width:100%;
+    margin-bottom:10px;
+    border-bottom:2px solid var(--grey-button);
+  }
+  .tabs input[type="radio"]:checked + label,
+  .tabs label:hover{
+    color:var(--primary-Red) !important;
+    border-bottom:4px solid var(--primary-Red) !important;
+  }
+   .tab-content {
+    flex-direction: column !important;  
     align-items: center;
-    gap: 15px;
-  }
-
-  .buttonchrome,
-  .buttonfirefox {
-    margin: 0;
-    width: 80%;
-  }
-
-  .featurecenter {
-    padding: 20px;
-  }
-
-  .featurecenter p {
+    text-align: center;
     margin: 0 auto;
-    width: 100%;
-    text-align: center;
-  }
-
-  .bookmark-content {
-    flex-direction: column;
-    text-align: center;
-    margin: 0;
     gap: 40px;
   }
 
-  .illustrationphoto2 {
-    width: 100%;
+  .pic {
+    width: 90% !important;              
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .info {
+    width: 90% !important;
+    margin: 0;
+    padding: 0 10px;
+     display: flex;
+    flex-direction: column;
+    align-items: center;   
+    text-align: center;
+  }
+  
+  .button {
+    margin: 30px auto 0;   
+  }
+  .blue-bg-bookmark {
+    display: block;
+    width: 60vw;          
+    height: 60vw;        
+    left: -10vw;          
+    top: 10%;             
+    border-radius: 0 0 20vw 0;
+  
+  }
+
+  .tabs label:hover,
+  #tab1:checked + label,
+  #tab2:checked + label,
+  #tab3:checked + label {
+    color: var(--primary-Red) !important;
+    border-bottom: 4px solid var(--primary-Red) !important;
+  }
+
+.frequentlyasked{
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+  text-align: center;    
+  padding: 40px 20px; 
+}
+
+.faq-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  text-align: center;   
+  padding: 40px 20px;   
+}
+
+.faq-container {
+  width: 100%;
+  max-width: 600px;      
+}
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .tab-content {
+    flex-direction: row !important;
+    gap: 30px;
+  }
+
+  .pic {
+    width: 45% !important;
     max-width: 350px;
-    margin-left: 0;
+  }
+
+  .info {
+    width: 50% !important;
+    margin: 0;
   }
 
   .blue-bg-bookmark {
-    display: none;
-  }
-
-  .extensions {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    
-  }
-
-  .firefoxextension,
-  .operaextension {
-    transform: translateY(0);
-  }
-
-  .faq-section {
-    padding: 20px;
-  }
-
-  .stay-up-to-date {
-    padding: 40px 20px;
-  }
-
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
-
-  .footer-nav {
-    flex-direction: column;
-    gap: 10px;
+    left: -150px;   /* smaller offset */
+    width: 400px;
+    height: 300px;
   }
 }
+
+@media (min-width: 1025px) {
+  html body header nav {
+    flex-direction: row !important;
+    position: static !important;
+    background: none !important;
+    padding: 0 !important;
+    gap: 70px !important;
+    margin-right: 240px !important;
+  }
+
+  html body header nav .nav-links {
+    flex-direction: row !important;
+  }}
